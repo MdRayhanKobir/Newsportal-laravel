@@ -1,0 +1,219 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+  
+    
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+.container-fluid{
+	padding:0 20px!important;
+}
+.header-icon{
+	text-align:center!important
+}
+.date{
+	text-align:center!important;
+}
+.tab-header .nav-tabs > li > a {
+	font-size: 8px!important;
+}
+.cetagory-title a{
+	font-size:15px!important;
+}
+.cetagory-title span{
+	font-size:15px!important;
+}
+.cetagory-title-02 a{
+	font-size:15px!important;
+}
+.cetagory-title-02 span i{
+	font-size:14px!important;
+}
+.cetagory-title-03{
+	font-size:14px!important;
+}
+.cetagory-title-04{
+	font-size:14px!important;
+}
+.lead-heading-01{
+	font-size:15px!important;	
+}
+.heading-01{
+	font-size:15px!important;
+}
+.heading-02{
+	font-size:14px!important;
+}
+.heading-03{
+	font-size:12px!important;
+}
+.heading-04{
+	font-size:14px!important;
+}
+.old-date-button input[type="submit"], button[type="submit"] {
+	float:none !important
+}
+.middle-footer{
+	font-size:15px!important;
+}
+.copyright{
+	font-size:14px!important;
+}
+.btm-foot-menu a{
+	font-size:14px!important;
+}
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+.container-fluid{
+	margin:0!important;
+	padding:10px!important;
+}
+.menu_bottom { 
+    background: #fff;
+}
+.navbar-toggle {
+     margin-top: -5px!important;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	padding-left: 20px!important;
+}
+.mainmenu .collapse ul > li > a{margin-left: 10px;}
+.mainmenu .collapse ul ul li{position:relative!important;}
+.mainmenu .collapse ul ul li:hover ul{display:block!important;}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    margin-left: 0px!important;
+}
+.header-icon ul{
+	text-align:center !important;
+	border-left:none !important;
+	border-top:1px solid#F0F0F0 !important;
+	padding-top:10px !important;
+}
+.top-add{
+	margin:10px 0 0 0!important;
+}
+.date ul{
+	text-align:center!important;
+}
+.date ul li{
+	padding-bottom:10px!important;
+}
+.scroll_01{
+	text-align:center!important;
+}
+.old-date-button input[type="submit"], button[type="submit"] {
+	float:none !important
+}
+.tab-header-02 {
+	margin-top: 0!important;
+}
+.nav-tabs.nav-justified > li {
+	border-bottom: 1px solid#F0F0F0 !important;
+}
+.tab-header-02 .nav-tabs > li.active > a, .tab-header-02 .nav-tabs > li.active > a:focus, .tab-header-02 .nav-tabs > li.active > a:hover {
+	border-top: 1px solid#F0F0F0!important;
+}
+.apps-img ul{
+    text-align:center!important;
+	margin-top:5px !important;
+}
+.apps-img img{   
+	margin-top:15px !important;
+}
+.middle-footer{
+	text-align:center!important;
+}
+.editor-two{
+	padding:10px 0!important;
+	margin:10px 0!important;
+	border-top:1px solid#333!important;
+	border-bottom:1px solid#333!important;
+}
+.copyright{
+	text-align:center!important;
+}
+.btm-foot-menu ul{
+	text-align:center!important;
+	float:none !important;
+}
+.social-nav li {
+	float: left !important;
+	
+}
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+.container-fluid{
+	margin:0!important;
+	padding:10px!important;
+}
+.menu_bottom { 
+    background: #fff;
+}
+.navbar-toggle {
+     margin-top: -5px!important;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	padding-left: 20px!important;
+}
+.mainmenu .collapse ul > li > a{margin-left: 10px;}
+.mainmenu .collapse ul ul li{position:relative!important;}
+.mainmenu .collapse ul ul li:hover ul{display:block!important;}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    margin-left: 0px!important;
+}
+.header-icon ul{
+	text-align:center !important;
+	border-left:none !important;
+	border-top:1px solid#F0F0F0 !important;
+	padding-top:10px !important;
+}
+.top-add{
+	margin:10px 0 0 0!important;
+}
+.date ul{
+	text-align:center!important;
+}
+.date ul li{
+	padding-bottom:10px!important;
+}
+.scroll_01{
+	text-align:center!important;
+}
+.old-date-button input[type="submit"], button[type="submit"] {
+	float:none !important
+}
+.tab-header-02 {
+	margin-top: 0!important;
+}
+.nav-tabs.nav-justified > li {
+	border-bottom: 1px solid#F0F0F0 !important;
+}
+.tab-header-02 .nav-tabs > li.active > a, .tab-header-02 .nav-tabs > li.active > a:focus, .tab-header-02 .nav-tabs > li.active > a:hover {
+	border-top: 1px solid#F0F0F0!important;
+}
+.apps-img ul{
+    text-align:center!important;
+	margin-top:5px !important;
+}
+.apps-img img{   
+	margin-top:15px !important;
+}
+.middle-footer{
+	text-align:center!important;
+}
+.editor-two{
+	padding:10px 0!important;
+	margin:10px 0!important;
+	border-top:1px solid#333!important;
+	border-bottom:1px solid#333!important;
+}
+.copyright{
+	text-align:center!important;
+}
+.btm-foot-menu ul{
+	text-align:center!important;
+	float:none !important;
+}
+}

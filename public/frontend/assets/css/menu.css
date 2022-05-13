@@ -1,0 +1,87 @@
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    padding-left: 0px;
+}
+.navbar-nav > li > a {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.mainmenu {
+    background-color: transparent;
+    border-color: transparent;
+    margin-bottom: 0;
+	border: 0px !important;
+	margin-top:5px!important
+}
+.navbar-nav > li:last-child > a {
+    padding-right: 0px;
+    margin-right: 0px;
+}
+.dropdown-menu {
+	padding: 0 0;
+    margin: 0 0 0;
+    border: 0px solid transition !important;
+    border: 0px solid rgba(0,0,0,.15);
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+	border-top:3px solid#E6400C;
+}
+
+/*=-====Main Menu=====*/
+
+
+.menu_area .mainmenu .active a,
+.menu_area .mainmenu .active a:focus,
+.menu_area .mainmenu .active a:hover,
+.menu_area .mainmenu li a:hover,
+.menu_area .mainmenu li a:focus ,
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+    color: #FF6014!important;
+    outline: 0;
+    font-weight: 500;
+	background:#FCFCFC;
+}
+
+/*-----./ Main Menu-----*/
+
+.navbar-default .navbar-toggle { border-color: #ddd } /*Toggle Button*/
+.navbar-default .navbar-toggle .icon-bar { background-color: #000 } /*Toggle Button*/
+
+/*==========Sub Menu hover color==========*/
+.mainmenu .collapse ul > li:hover > a{color: #000;}
+.mainmenu .collapse ul ul > li:hover > a, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus, 
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{background: #E6400C; color: #fff!important;}
+.mainmenu .collapse ul ul ul > li:hover > a{color: #000!important;}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	color: #494949!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************Drop-down menu work on hover**********************************/
+.mainmenu{background: none;border: 0 solid;margin: 0;padding: 0;min-height:20px}
+@media only screen and (min-width: 767px) {
+.mainmenu .collapse ul li{position:relative;transition: .7s!important;}
+.mainmenu .collapse ul li:hover> ul{display:block}
+.mainmenu .collapse ul ul{position:absolute;top:100%;left:0;min-width:160px;padding-top: 3px;display:none}
+/*******/
+.mainmenu .collapse ul ul li{position:relative}
+.mainmenu .collapse ul ul li:hover> ul{display:block; padding-top:0px!important;}
+.mainmenu .collapse ul ul ul{position:absolute;top:0;left:100%;min-width:160px;display:none}
+/*******/
+.mainmenu .collapse ul ul ul li{position:relative}
+.mainmenu .collapse ul ul ul li:hover ul{display:block}
+.mainmenu .collapse ul ul ul ul{position:absolute;top:0;left:100%;min-width:160px;display:none;z-index:1}
+
+}
+
