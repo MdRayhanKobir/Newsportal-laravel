@@ -9,9 +9,10 @@ use Intervention\Image\Facades\Image;
 
 class WebsiteSettingController extends Controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware('auth');
-        }
+    }
 
     public function AllWebsiteSetting()
     {

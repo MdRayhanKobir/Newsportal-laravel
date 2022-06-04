@@ -20,7 +20,7 @@ Admin Panel page
               </div>
               <div class="col-3 col-sm-2 col-xl-2 pl-0 text-center">
                 <span>
-                  <a href="https://www.bootstrapdash.com/product/corona-admin-template/" target="_blank" class="btn btn-outline-light btn-rounded get-started-btn">Upgrade to PRO</a>
+                  <a href="{{ Url('/') }}" target="_blank" class="btn btn-outline-light btn-rounded get-started-btn">Visit Our Website</a>
                 </span>
               </div>
             </div>

@@ -42,11 +42,17 @@
                                     <div class="form-group col-md-6">
                                         <label for="exampleInputName1">Title English</label>
                                         <input type="text" class="form-control" id="exampleInputName1" name=" title_eng">
+                                        @error('title_eng')
+                                        <div class="alert text-danger">{{ $message }}</div>
+                                         @enderror
                                     </div>
 
                                     <div class="form-group col-md-6">
                                         <label for="exampleInputName1">Title Bangla</label>
                                         <input type="text" class="form-control" id="exampleInputName1" name="title_bang">
+                                        @error('title_bang')
+                                        <div class="alert text-danger">{{ $message }}</div>
+                                         @enderror
                                     </div>
                                 </div> <!-- End Row  -->
 
@@ -64,8 +70,8 @@
                                             @endforeach
                                         </select>
                                         @error('category_id')
-                                <div class="alert text-danger">{{ $message }}</div>
-                            @enderror
+                                        <div class="alert text-danger">{{ $message }}</div>
+                                         @enderror
                                     </div>
 
                                     <div class="form-group col-md-6">
@@ -113,11 +119,17 @@
                                     <div class="form-group col-md-6">
                                         <label for="exampleInputName1">Tags English</label>
                                         <input type="text" class="form-control" id="exampleInputName1" name="tags_eng">
+                                        @error('tags_eng')
+                                        <div class="alert text-danger">{{ $message }}</div>
+                                         @enderror
                                     </div>
 
                                     <div class="form-group col-md-6">
                                         <label for="exampleInputName1">Tags Bangla</label>
                                         <input type="text" class="form-control" id="exampleInputName1" name="tags_bang">
+                                        @error('tags_bang')
+                                        <div class="alert text-danger">{{ $message }}</div>
+                                         @enderror
                                     </div>
                                 </div> <!-- End Row  -->
 

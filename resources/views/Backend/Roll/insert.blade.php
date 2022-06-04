@@ -34,11 +34,17 @@
                           <div class="form-group">
                             <label for="exampleInputUsername1">Name</label>
                             <input type="text" class="form-control" name="name">
+                            @error('name')
+                                <div class="alert text-danger">{{ $message }}</div>
+                            @enderror
                           </div>
 
                           <div class="form-group">
                             <label for="exampleInputEmail1">Email</label>
                             <input type="email" class="form-control" name="email">
+                            @error('email')
+                                <div class="alert text-danger">{{ $message }}</div>
+                            @enderror
                           </div>
 
                           <div class="form-group">

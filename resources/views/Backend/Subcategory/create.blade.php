@@ -34,14 +34,14 @@
                           <div class="form-group">
                             <label for="exampleInputUsername1">Sub-Category English</label>
                             <input type="text" class="form-control" name="subcategory_eng" placeholder="subcategory english...">
-                            @error('category_eng')
+                            @error('subcategory_eng')
                                 <div class="alert text-danger">{{ $message }}</div>
                             @enderror
                           </div>
                           <div class="form-group">
                             <label for="exampleInputEmail1">Sub-Category Bangla</label>
                             <input type="text" class="form-control" name="subcategory_bang"  placeholder="subcategory bangla...">
-                            @error('category_bang')
+                            @error('subcategory_bang')
                                 <div class="alert text-danger">{{ $message }}</div>
                             @enderror
                           </div>

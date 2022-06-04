@@ -112,8 +112,9 @@ $allwebsitesetting = DB::table('websitesettings')->first();
             <div class="col-md-6 col-sm-6">
                 <div class="btm-foot-menu">
                     <ul>
-                        <li><a href="#">About US</a></li>
-                        <li><a href="#">Contact US</a></li>
+                        <li><a href="{{ route('about.us') }}">About US</a></li>
+                        <li><a href="{{ route('terms.condition') }}">Terms & Condition</a></li>
+                        <li><a href="{{ route('contact.us') }}">Contact US</a></li>
                     </ul>
                 </div>
             </div>

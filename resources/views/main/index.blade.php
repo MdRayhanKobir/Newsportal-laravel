@@ -41,7 +41,7 @@
                     </div>
                     <div class="row">
                         @foreach ($firstsection as $firstsection)
-                            <div class="col-md-4 col-sm-4  col-lg-4">
+                            <div class="col-md-3 col-sm-3  col-lg-3">
                                 <div class="top-news">
                                     <a href="{{ route('singlepost', ['id' => $firstsection->id]) }}"><img
                                             src="{{ asset($firstsection->image) }}" alt="Notebook"></a>
@@ -93,7 +93,8 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="bg-one">
-                                <div class="cetagory-title"><a href="{{ URL::to('catpost/'.$firstcategory->id.'/'.$firstcategory->category_eng) }}">
+                                <div class="cetagory-title"><a
+                                        href="{{ URL::to('catpost/' . $firstcategory->id . '/' . $firstcategory->category_eng) }}">
                                         @if (session()->get('lang') == 'bangla')
                                             {{ $firstcategory->category_eng }}
                                         @else
@@ -127,7 +128,8 @@
                                     <div class="col-md-6 col-sm-6">
                                         @foreach ($firstcatsmallthumnail as $firstcatsmallthumnail)
                                             <div class="image-title">
-                                                <a href="{{ route('singlepost', ['id' => $firstcatsmallthumnail->id]) }}"><img
+                                                <a
+                                                    href="{{ route('singlepost', ['id' => $firstcatsmallthumnail->id]) }}"><img
                                                         src="{{ asset($firstcatsmallthumnail->image) }}"
                                                         alt="Notebook"></a>
                                                 <h4 class="heading-03"><a
@@ -163,7 +165,8 @@
 
                         <div class="col-md-6 col-sm-6">
                             <div class="bg-one">
-                                <div class="cetagory-title"><a href="{{ URL::to('catpost/'.$secondcategory->id.'/'.$secondcategory->category_eng) }}">
+                                <div class="cetagory-title"><a
+                                        href="{{ URL::to('catpost/' . $secondcategory->id . '/' . $secondcategory->category_eng) }}">
                                         @if (session()->get('lang') == 'bangla')
                                             {{ $secondcategory->category_eng }}
                                         @else
@@ -182,6 +185,7 @@
                                     </a></div>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
+
                                         <div class="top-news">
                                             <a href="{{ route('singlepost', ['id' => $secondcatbigthumnail->id]) }}"><img
                                                     src="{{ asset($secondcatbigthumnail->image) }}" alt="Notebook"></a>
@@ -194,11 +198,14 @@
                                                     @endif
                                                 </a> </h4>
                                         </div>
+
+
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         @foreach ($secondcatsmallthumnail as $secondcatsmallthumnail)
                                             <div class="image-title">
-                                                <a href="{{ route('singlepost', ['id' => $secondcatsmallthumnail->id]) }}"><img
+                                                <a
+                                                    href="{{ route('singlepost', ['id' => $secondcatsmallthumnail->id]) }}"><img
                                                         src="{{ asset($secondcatsmallthumnail->image) }}"
                                                         alt="Notebook"></a>
                                                 <h4 class="heading-03"><a
@@ -355,7 +362,8 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <div class="bg-one">
-                        <div class="cetagory-title-02"><a href="{{ URL::to('catpost/'.$thirdcategory->id.'/'.$thirdcategory->category_eng) }}">
+                        <div class="cetagory-title-02"><a
+                                href="{{ URL::to('catpost/' . $thirdcategory->id . '/' . $thirdcategory->category_eng) }}">
                                 @if (session()->get('lang') == 'bangla')
                                     {{ $thirdcategory->category_eng }}
                                 @else
@@ -374,8 +382,10 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="top-news">
-                                    <a href="#"><img src="{{ asset($thirdcatbigthumnail->image) }}" alt="Notebook"></a>
-                                    <h4 class="heading-02"><a href="#">
+                                    <a href="{{ route('singlepost', ['id' => $thirdcatbigthumnail->id]) }}"><img
+                                            src="{{ asset($thirdcatbigthumnail->image) }}" alt="Notebook"></a>
+                                    <h4 class="heading-02"><a
+                                            href="{{ route('singlepost', ['id' => $thirdcatbigthumnail->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
                                                 {{ $thirdcatbigthumnail->title_eng }}
                                             @else
@@ -388,9 +398,10 @@
                             <div class="col-md-6 col-sm-6">
                                 @foreach ($thirdcatsmallthumnail as $thirdcatsmallthumnail)
                                     <div class="image-title">
-                                        <a href="#"><img src="{{ asset($thirdcatsmallthumnail->image) }}"
-                                                alt="Notebook"></a>
-                                        <h4 class="heading-03"><a href="#">
+                                        <a href="{{ route('singlepost', ['id' => $thirdcatsmallthumnail->id]) }}"><img
+                                                src="{{ asset($thirdcatsmallthumnail->image) }}" alt="Notebook"></a>
+                                        <h4 class="heading-03"><a
+                                                href="{{ route('singlepost', ['id' => $thirdcatsmallthumnail->id]) }}">
                                                 @if (session()->get('lang') == 'bangla')
                                                     {{ $thirdcatsmallthumnail->title_eng }}
                                                 @else
@@ -423,7 +434,8 @@
                 @endphp
                 <div class="col-md-6 col-sm-6">
                     <div class="bg-one">
-                        <div class="cetagory-title-02"><a href="{{ URL::to('catpost/'.$fourdcategory->id.'/'.$fourdcategory->category_eng) }}">
+                        <div class="cetagory-title-02"><a
+                                href="{{ URL::to('catpost/' . $fourdcategory->id . '/' . $fourdcategory->category_eng) }}">
                                 @if (session()->get('lang') == 'bangla')
                                     {{ $fourdcategory->category_eng }}
                                 @else
@@ -440,8 +452,10 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="top-news">
-                                    <a href="#"><img src="{{ asset($fourcatbigthumnail->image) }}" alt="Notebook"></a>
-                                    <h4 class="heading-02"><a href="#">
+                                    <a href="{{ route('singlepost', ['id' => $fourcatbigthumnail->id]) }}"><img
+                                            src="{{ asset($fourcatbigthumnail->image) }}" alt="Notebook"></a>
+                                    <h4 class="heading-02"><a
+                                            href="{{ route('singlepost', ['id' => $fourcatbigthumnail->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
                                                 {{ $fourcatbigthumnail->title_eng }}
                                             @else
@@ -454,9 +468,10 @@
                             <div class="col-md-6 col-sm-6">
                                 @foreach ($fourcatsmallthumnail as $fourcatsmallthumnail)
                                     <div class="image-title">
-                                        <a href="#"><img src="{{ asset($fourcatsmallthumnail->image) }}"
-                                                alt="Notebook"></a>
-                                        <h4 class="heading-03"><a href="#">
+                                        <a href="{{ route('singlepost', ['id' => $fourcatsmallthumnail->id]) }}"><img
+                                                src="{{ asset($fourcatsmallthumnail->image) }}" alt="Notebook"></a>
+                                        <h4 class="heading-03"><a
+                                                href="{{ route('singlepost', ['id' => $fourcatsmallthumnail->id]) }}">
                                                 @if (session()->get('lang') == 'bangla')
                                                     {{ $fourcatsmallthumnail->title_eng }}
                                                 @else
@@ -490,7 +505,8 @@
             <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <div class="bg-one">
-                        <div class="cetagory-title-02"><a href="{{ URL::to('catpost/'.$fivecategory->id.'/'.$fivecategory->category_eng) }}">
+                        <div class="cetagory-title-02"><a
+                                href="{{ URL::to('catpost/' . $fivecategory->id . '/' . $fivecategory->category_eng) }}">
                                 @if (session()->get('lang') == 'bangla')
                                     {{ $fivecategory->category_eng }}
                                 @else
@@ -509,8 +525,10 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="top-news">
-                                    <a href="#"><img src="{{ asset($fivecatbigthumnail->image) }}" alt="Notebook"></a>
-                                    <h4 class="heading-02"><a href="#">
+                                    <a href="{{ route('singlepost', ['id' => $fivecatbigthumnail->id]) }}"><img
+                                            src="{{ asset($fivecatbigthumnail->image) }}" alt="Notebook"></a>
+                                    <h4 class="heading-02"><a
+                                            href="{{ route('singlepost', ['id' => $fivecatbigthumnail->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
                                                 {{ $fivecatbigthumnail->title_eng }}
                                             @else
@@ -522,9 +540,10 @@
                             <div class="col-md-6 col-sm-6">
                                 @foreach ($fivecatsmallthumnail as $fivecatsmallthumnail)
                                     <div class="image-title">
-                                        <a href="#"><img src="{{ asset($fivecatsmallthumnail->image) }}"
-                                                alt="Notebook"></a>
-                                        <h4 class="heading-03"><a href="#">
+                                        <a href="{{ route('singlepost', ['id' => $fivecatsmallthumnail->id]) }}"><img
+                                                src="{{ asset($fivecatsmallthumnail->image) }}" alt="Notebook"></a>
+                                        <h4 class="heading-03"><a
+                                                href="{{ route('singlepost', ['id' => $fivecatsmallthumnail->id]) }}">
                                                 @if (session()->get('lang') == 'bangla')
                                                     {{ $fivecatsmallthumnail->title_eng }}
                                                 @else
@@ -556,7 +575,8 @@
                 @endphp
                 <div class="col-md-6 col-sm-6">
                     <div class="bg-one">
-                        <div class="cetagory-title-02"><a href="{{ URL::to('catpost/'.$sixcategory->id.'/'.$sixcategory->category_eng) }}">
+                        <div class="cetagory-title-02"><a
+                                href="{{ URL::to('catpost/' . $sixcategory->id . '/' . $sixcategory->category_eng) }}">
                                 @if (session()->get('lang') == 'bangla')
                                     {{ $sixcategory->category_eng }}
                                 @else
@@ -574,8 +594,8 @@
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <div class="top-news">
-                                    <a href="#"><img src="{{ asset($sixcatbigthumnail->image) }}" alt="Notebook"></a>
-                                    <h4 class="heading-02"><a href="#">
+                                    <a href="{{ route('singlepost', ['id' => $sixcatbigthumnail->id]) }}"><img src="{{ asset($sixcatbigthumnail->image) }}" alt="Notebook"></a>
+                                    <h4 class="heading-02"><a href="{{ route('singlepost', ['id' => $sixcatbigthumnail->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
                                                 {{ $sixcatbigthumnail->title_eng }}
                                             @else
@@ -588,9 +608,9 @@
                             <div class="col-md-6 col-sm-6">
                                 @foreach ($sixcatsmallthumnail as $sixcatsmallthumnail)
                                     <div class="image-title">
-                                        <a href="#"><img src="{{ asset($sixcatsmallthumnail->image) }}"
+                                        <a href="{{ route('singlepost', ['id' => $sixcatsmallthumnail->id]) }}"><img src="{{ asset($sixcatsmallthumnail->image) }}"
                                                 alt="Notebook"></a>
-                                        <h4 class="heading-03"><a href="#">
+                                        <h4 class="heading-03"><a href="{{ route('singlepost', ['id' => $sixcatsmallthumnail->id]) }}">
 
                                                 @if (session()->get('lang') == 'bangla')
                                                     {{ $sixcatsmallthumnail->title_eng }}
@@ -652,7 +672,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-9 col-sm-9">
-                    <div class="cetagory-title-02"><a href="{{ URL::to('catpost/'.$sevencategory->id.'/'.$sevencategory->category_eng) }}">
+                    <div class="cetagory-title-02"><a
+                            href="{{ URL::to('catpost/' . $sevencategory->id . '/' . $sevencategory->category_eng) }}">
                             @if (session()->get('lang') == 'bangla')
                                 {{ $sevencategory->category_eng }}
                             @else
@@ -671,8 +692,8 @@
                     <div class="row">
                         <div class="col-md-7 col-sm-7">
                             <div class="top-news">
-                                <a href="#"><img src="{{ asset($sevencatbigthumnail->image) }}" alt="Notebook"></a>
-                                <h4 class="heading-02"><a href="#">
+                                <a href="{{ route('singlepost', ['id' => $sevencatbigthumnail->id]) }}"><img src="{{ asset($sevencatbigthumnail->image) }}" alt="Notebook"></a>
+                                <h4 class="heading-02"><a href="{{ route('singlepost', ['id' => $sevencatbigthumnail->id]) }}">
                                         @if (session()->get('lang') == 'bangla')
                                             {{ $sevencatbigthumnail->title_eng }}
                                         @else
@@ -686,8 +707,8 @@
                         <div class="col-md-5 col-sm-5">
                             @foreach ($sevencatsmallthumnail as $sevencatsmallthumnail)
                                 <div class="image-title">
-                                    <a href="#"><img src="{{ asset($sevencatsmallthumnail->image) }}" alt="Notebook"></a>
-                                    <h4 class="heading-03"><a href="#">
+                                    <a href="{{ route('singlepost', ['id' => $sevencatsmallthumnail->id]) }}"><img src="{{ asset($sevencatsmallthumnail->image) }}" alt="Notebook"></a>
+                                    <h4 class="heading-03"><a href="{{ route('singlepost', ['id' => $sevencatsmallthumnail->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
                                                 {{ $sevencatsmallthumnail->title_eng }}
                                             @else
@@ -734,7 +755,8 @@
                     @endphp
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
-                            <div class="cetagory-title-02"><a href="{{ URL::to('catpost/'.$eightcategory->id.'/'.$eightcategory->category_eng) }}">
+                            <div class="cetagory-title-02"><a
+                                    href="{{ URL::to('catpost/' . $eightcategory->id . '/' . $eightcategory->category_eng) }}">
                                     @if (session()->get('lang') == 'bangla')
                                         {{ $eightcategory->category_eng }}
                                     @else
@@ -753,8 +775,8 @@
                         <div class="col-md-7 col-sm-7">
                             <div class="bg-gray">
                                 <div class="top-news">
-                                    <a href="#"><img src="{{ asset($eightcatbigthumnail->image) }}" alt="Notebook"></a>
-                                    <h4 class="heading-02"><a href="#">
+                                    <a href="{{ route('singlepost', ['id' => $eightcatbigthumnail->id]) }}"><img src="{{ asset($eightcatbigthumnail->image) }}" alt="Notebook"></a>
+                                    <h4 class="heading-02"><a href="{{ route('singlepost', ['id' => $eightcatbigthumnail->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
                                                 {{ $eightcatbigthumnail->title_eng }}
                                             @else
@@ -768,8 +790,9 @@
                         <div class="col-md-5 col-sm-5">
                             @foreach ($eightcatsmallthumnail as $eightcatsmallthumnail)
                                 <div class="image-title">
-                                    <a href="#"><img src="{{ asset($eightcatsmallthumnail->image) }}" alt="Notebook"></a>
-                                    <h4 class="heading-03"><a href="#">
+                                    <a href="{{ route('singlepost', ['id' => $eightcatsmallthumnail->id]) }}"><img src="{{ asset($eightcatsmallthumnail->image) }}"
+                                            alt="Notebook"></a>
+                                    <h4 class="heading-03"><a href="{{ route('singlepost', ['id' => $eightcatsmallthumnail->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
                                                 {{ $eightcatsmallthumnail->title_eng }}
                                             @else
@@ -875,8 +898,6 @@
                                             </h4>
                                         </div>
                                     @endforeach
-
-
 
 
                                 </div>
@@ -1088,8 +1109,8 @@
                     </div>
 
                     <!--=======================================
-                                            Video Gallery clickable jquary  start
-                                        ========================================-->
+                                                    Video Gallery clickable jquary  start
+                                                ========================================-->
 
                     <script>
                         var slideIndex = 1;
@@ -1125,8 +1146,8 @@
                     </script>
 
                     <!--=======================================
-                                            Video Gallery clickable  jquary  close
-                                        =========================================-->
+                                                    Video Gallery clickable  jquary  close
+                                                =========================================-->
                     @php
                         $videogallery = DB::table('videos')
                             ->where('videos.type', 1)

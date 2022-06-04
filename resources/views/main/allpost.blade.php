@@ -62,9 +62,15 @@
         </div>
         <div class="col-md-3 col-sm-4">
             <!-- add-start -->
+            @php
+            $vertical = DB::table('adds')
+                ->where('adds.type', 0)
+                ->skip(1)
+                ->first();
+            @endphp
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                        <div class="sidebar-add"><img src="{{ asset('frontend/assets/img/add_01.jpg') }}" alt="" /></div>
+                        <div class="sidebar-add"><img src="{{ asset($vertical->ads) }}" alt="" /></div>
                     </div>
                 </div><!-- /.add-close -->
                 {{-- tab part --}}
@@ -173,9 +179,14 @@
          </div>
      </div>
             <!-- add-start -->
+            @php
+            $vertical = DB::table('adds')
+                ->where('adds.type', 0)
+                ->first();
+            @endphp
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
-                        <div class="sidebar-add"><img src="{{ asset('frontend/assets/img/add_01.jpg') }}" alt="" /></div>
+                        <div class="sidebar-add"><img src="{{ asset($vertical->ads) }}" alt="" /></div>
                     </div>
                 </div><!-- /.add-close -->
         </div>

@@ -56,7 +56,7 @@
                                             তাকানো
                                         @endif
                                     </li>
-                                    <li><i class="fa fa-clock-o"></i> 09 My 2020 </li>
+                                    <li><i class="fa fa-clock-o"></i> 09 My 2022 </li>
                                 </ul>
 
                             </div>
@@ -123,8 +123,10 @@
                         @foreach ($relatednews as $relatednews)
                             <div class="col-md-4 col-sm-4">
                                 <div class="top-news sng-border-btm">
-                                    <a href="{{ route('singlepost',['id'=>$relatednews->id]) }}"><img src="{{ asset($relatednews->image) }}" alt="Notebook"></a>
-                                    <h4 class="heading-02"><a href="{{ route('singlepost',['id'=>$relatednews->id]) }}">
+                                    <a href="{{ route('singlepost', ['id' => $relatednews->id]) }}"><img
+                                            src="{{ asset($relatednews->image) }}" alt="Notebook"></a>
+                                    <h4 class="heading-02"><a
+                                            href="{{ route('singlepost', ['id' => $relatednews->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
                                                 {{ $relatednews->title_eng }}
                                             @else
@@ -138,10 +140,15 @@
                 </div>
                 <div class="col-md-4 col-sm-4">
                     <!-- add-start -->
+                    @php
+                        $vertical = DB::table('adds')
+                            ->where('adds.type', 0)
+                            ->skip(1)
+                            ->first();
+                    @endphp
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
-                            <div class="sidebar-add"><img src="{{ asset('frontend/assets/img/add_01.jpg') }}"
-                                    alt="" /></div>
+                            <div class="sidebar-add"><img src="{{ asset($vertical->ads) }}" alt="" /></div>
                         </div>
                     </div><!-- /.add-close -->
 
@@ -250,10 +257,15 @@
                         </div>
                     </div>
                     <!-- add-start -->
+                    @php
+                        $vertical = DB::table('adds')
+                            ->where('adds.type', 0)
+                            ->first();
+                    @endphp
+
                     <div class="row">
                         <div class="col-md-12 col-sm-12">
-                            <div class="sidebar-add"><img src="{{ asset('frontend/assets/img/add_01.jpg') }}"
-                                    alt="" /></div>
+                            <div class="sidebar-add"><img src="{{ asset($vertical->ads) }}" alt="" /></div>
                         </div>
                     </div><!-- /.add-close -->
                 </div>

@@ -50,14 +50,10 @@ Route::get('/subcatpost/{id}/{subcategory_eng}',[HomeController::class,'Suballpo
 Route::get('/get/subdistrict/search/{distric_id}',[HomeController::class,'SearchGetdistrict']);
 Route::get('/search/district',[HomeController::class,'SearchDistrict'])->name('search.district');
 
-
-
-
-
-
-
-
-
+// Aboutus.terms & condition all Route
+Route::get('/aboutus',[HomeController::class,'AboutUs'])->name('about.us');
+Route::get('/terms/condition',[HomeController::class,'TermsCondition'])->name('terms.condition');
+Route::get('/contactus',[HomeController::class,'ContactUs'])->name('contact.us');
 
 
 
