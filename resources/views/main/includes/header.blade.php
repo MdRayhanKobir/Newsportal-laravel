@@ -107,8 +107,8 @@ $allwebsitesetting=DB::table('websitesettings')->first();
                                                                 <form>
                                                                     <div class="input-group">
                                                                         <input class="search form-control input-lg"
-                                                                            placeholder="search" value="Type Here.."
-                                                                            type="text">
+                                                                            placeholder="search"
+                                                                            type="text" name="search" id="search">
                                                                         <span class="input-group-btn">
                                                                             <button class="btn btn-lg"
                                                                                 type="button"> <i class="fa fa-search"

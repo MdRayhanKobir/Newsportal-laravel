@@ -55,6 +55,10 @@ Route::get('/aboutus',[HomeController::class,'AboutUs'])->name('about.us');
 Route::get('/terms/condition',[HomeController::class,'TermsCondition'])->name('terms.condition');
 Route::get('/contactus',[HomeController::class,'ContactUs'])->name('contact.us');
 
+// news share
+Route::post('/share/news',[HomeController::class,'StoreNews'])->name('store.news');
+Route::get('/share/news/view',[HomeController::class,'ViewNews'])->name('view.news');
+
 
 
 

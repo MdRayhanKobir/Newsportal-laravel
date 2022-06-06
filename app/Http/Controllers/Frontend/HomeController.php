@@ -96,4 +96,25 @@ class HomeController extends Controller
         return view('main.contactus');
     }
 
+    // share news
+    public function StoreNews(Request $request){
+        // dd($request);
+        $data = array();
+        $data['name']=$request->name;
+        $data['address']=$request->address;
+        $data['number']=$request->number;
+        $data['details']=$request->details;
+        DB::table('newsshare')->insert($data);
+        return redirect()->back();
+
+
+    }
+
+    public function ViewNews(){
+        $news=DB::table('newsshare')->orderBy('id', 'desc')->paginate(5);
+        return view('Backend.Sharenews.share_news',compact('news'));
+    }
+
+
+
 }

@@ -106,7 +106,7 @@ $allwebsitesetting = DB::table('websitesettings')->first();
         <div class="row">
             <div class="col-md-6 col-sm-6">
                 <div class="copyright">
-                    All rights reserved © 2022 Rayhan Kobir
+                    All rights reserved © 2022 JONOTAR-KOTHA
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">

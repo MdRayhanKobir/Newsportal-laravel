@@ -170,7 +170,7 @@
                     <span class="menu-icon">
                         <i class="mdi mdi-playlist-play"></i>
                     </span>
-                    <span class="menu-title">Website Setting</span>
+                    <span class="menu-title">Website</span>
                     <i class="menu-arrow"></i>
                 </a>
                 <div class="collapse" id="website">
@@ -233,20 +233,39 @@
                     <span class="menu-icon">
                         <i class="mdi mdi-playlist-play"></i>
                     </span>
-                    <span class="menu-title">User Roll</span>
+                    <span class="menu-title">Manage User</span>
                     <i class="menu-arrow"></i>
                 </a>
                 <div class="collapse" id="user">
                     <ul class="nav flex-column sub-menu">
                         <li class="nav-item"> <a class="nav-link" href="{{ route('add.writter') }}">
-                                Add Writter </a></li>
+                                Add User </a></li>
                         <li class="nav-item"> <a class="nav-link" href="{{ route('all.writter') }}">
-                                All Writter </a></li>
+                                All Users </a></li>
                     </ul>
                 </div>
             </li>
         @else
         @endif
 
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#news" aria-expanded="false"
+                aria-controls="news">
+                <span class="menu-icon">
+                    <i class="mdi mdi-playlist-play"></i>
+                </span>
+                <span class="menu-title">News Manage</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="news">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('view.news') }}">
+                            Show Share news </a></li>
+
+                </ul>
+            </div>
+        </li>
+
     </ul>
+
 </nav>
