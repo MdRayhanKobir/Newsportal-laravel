@@ -31,9 +31,9 @@
                 <div class="col-md-3 col-sm-4">
                     <div class="apps-img">
                         <ul>
-                            <li><a href="#"><img src="{{ asset('frontend/assets/img/apps-01.png') }}" alt="" /></a>
+                            <li><a href="https://www.apple.com/"><img src="{{ asset('frontend/assets/img/apps-01.png') }}" alt="" /></a>
                             </li>
-                            <li><a href="#"><img src="{{ asset('frontend/assets/img/apps-02.png') }}" alt="" /></a>
+                            <li><a href="https://play.google.com/store/games?hl=en&gl=US"><img src="{{ asset('frontend/assets/img/apps-02.png') }}" alt="" /></a>
                             </li>
                         </ul>
                     </div>
@@ -47,8 +47,8 @@
 @php
 $allwebsitesetting = DB::table('websitesettings')->first();
 @endphp
-<section class="middle-footer">
-    <div class="container-fluid">
+<section class="middle-footer" style="background-color: #222f3e !important">
+    <div class="container-fluid" >
         <div class="row">
             <div class="col-md-4 col-sm-4">
                 <div class="editor-one">
@@ -106,7 +106,7 @@ $allwebsitesetting = DB::table('websitesettings')->first();
         <div class="row">
             <div class="col-md-6 col-sm-6">
                 <div class="copyright">
-                    All rights reserved © 2022 JONOTAR-KOTHA
+                    All rights reserved © 2022 <span style="color: red">JONOTAR-KOTHA</span>
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">

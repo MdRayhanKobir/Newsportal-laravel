@@ -127,7 +127,7 @@
                  <div class="news-titletab">
                      @foreach ($latest as $latest)
                          <div class="news-title-02">
-                             <h4 class="heading-03"><a href="#">
+                             <h4 class="heading-03"><a href="{{ route('singlepost', ['id' => $latest->id]) }}">
                                      @if (session()->get('lang') == 'bangla')
                                          {{ $latest->title_eng }}
                                      @else
@@ -147,7 +147,7 @@
                  <div class="news-titletab">
                      @foreach ($popular as $popular)
                          <div class="news-title-02">
-                             <h4 class="heading-03"><a href="#">
+                             <h4 class="heading-03"><a href="{{ route('singlepost', ['id' => $popular->id]) }}">
                                      @if (session()->get('lang') == 'bangla')
                                          {{ $popular->title_eng }}
                                      @else
@@ -163,7 +163,7 @@
                  <div class="news-titletab">
                      @foreach ($highest as $highest)
                          <div class="news-title-02">
-                             <h4 class="heading-03"><a href="#">
+                             <h4 class="heading-03"><a href="{{ route('singlepost', ['id' => $highest->id]) }}">
                                      @if (session()->get('lang') == 'bangla')
                                          {{ $highest->title_eng }}
                                      @else

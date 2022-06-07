@@ -10,7 +10,7 @@ $allwebsitesetting=DB::table('websitesettings')->first();
         <div class="row">
             <div class="col-xs-6 col-md-2 col-sm-4">
                 <div class="header_logo">
-                    <a href=""><img src="{{ asset($allwebsitesetting->logo) }}" style="margin-top:15px;"></a>
+                    <a href="{{ URL('/') }}"><img src="{{ asset($allwebsitesetting->logo) }}" style="margin-top:15px;"></a>
                 </div>
             </div>
             <div class="col-xs-6 col-md-8 col-sm-8">
@@ -104,20 +104,21 @@ $allwebsitesetting=DB::table('websitesettings')->first();
                                                     <div class="row">
                                                         <div class="col-md-12">
                                                             <div class="custom-search-input">
-                                                                <form>
+                                                                <form  action="{{ route('search') }}" method="GET">
                                                                     <div class="input-group">
                                                                         <input class="search form-control input-lg"
                                                                             placeholder="search"
                                                                             type="text" name="search" id="search">
                                                                         <span class="input-group-btn">
                                                                             <button class="btn btn-lg"
-                                                                                type="button"> <i class="fa fa-search"
+                                                                                type="submit"> <i class="fa fa-search"
                                                                                     aria-hidden="true"></i> </button>
                                                                         </span>
                                                                     </div>
                                                                 </form>
                                                             </div>
                                                         </div>
+
                                                     </div>
                                                 </div>
                                             </div>

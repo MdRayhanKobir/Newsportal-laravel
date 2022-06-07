@@ -16,6 +16,7 @@ use App\Http\Controllers\Backend\SubDistrictController;
 use App\Http\Controllers\Backend\VideosController;
 use App\Http\Controllers\Backend\WebsiteSettingController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\LiveSearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +59,10 @@ Route::get('/contactus',[HomeController::class,'ContactUs'])->name('contact.us')
 // news share
 Route::post('/share/news',[HomeController::class,'StoreNews'])->name('store.news');
 Route::get('/share/news/view',[HomeController::class,'ViewNews'])->name('view.news');
+
+// search route
+Route::get('/search',[LiveSearchController::class,'search'])->name('search');
+
 
 
 

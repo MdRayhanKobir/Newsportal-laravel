@@ -1,3 +1,4 @@
+    <link rel="icon" type="image/x-icon" href="{{ asset('image/favicon.ico.png') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/menu.css') }}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/font-awesome.min.css') }}">
