@@ -55,7 +55,7 @@
                                     <a href="#" class="forgot-pass">Forgot password</a>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                                    <button type="submit" class="btn btn-primary btn-block enter-btn">Register</button>
                                 </div>
                                 <div class="d-flex">
                                     <button class="btn btn-facebook col mr-2">

@@ -62,6 +62,7 @@ Route::get('/share/news/view',[HomeController::class,'ViewNews'])->name('view.ne
 
 // search route
 Route::get('/search',[LiveSearchController::class,'search'])->name('search');
+Route::get('/search/view/singlepost/{id}',[LiveSearchController::class,'SearchSinglepost'])->name('search.singlepost');
 
 
 

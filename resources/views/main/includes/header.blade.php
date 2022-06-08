@@ -1,3 +1,4 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 @php
 $category = DB::table('categories')
     ->orderBy('id', 'ASC')
@@ -77,10 +78,10 @@ $allwebsitesetting=DB::table('websitesettings')->first();
 
                         <!-- version-start -->
                         @if (session()->get('lang') == 'bangla')
-                            <li class="version"><a href="{{ route('lang.english') }}"><B><B>BANGLA</B></B></a>
+                            <li class="version"><a style="color: white !important;" href="{{ route('lang.english') }}"><B>বাংলা</B></a>
                             </li>&nbsp;&nbsp;&nbsp;
                         @else
-                            <li class="version"><a href="{{ route('lang.bangla') }}"><B>ENGLISH</B></a></li>
+                            <li class="version"><a style="color: white !important;" href="{{ route('lang.bangla') }}"><B>ENGLISH</B></a></li>
                             &nbsp;&nbsp;&nbsp;
                         @endif
 
@@ -144,9 +145,45 @@ $allwebsitesetting=DB::table('websitesettings')->first();
                                 </div>
                             </div>
                         </li>
+                        <li><div class="digital-clock" style="font-size: 20px">00:00:00</div></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    $(document).ready(function() {
+  clockUpdate();
+  setInterval(clockUpdate, 1000);
+})
+
+function clockUpdate() {
+  var date = new Date();
+  $('.digital-clock').css({'color': '#fff', 'text-shadow': '0 0 6px black'});
+  function addZero(x) {
+    if (x < 10) {
+      return x = '0' + x;
+    } else {
+      return x;
+    }
+  }
+
+  function twelveHour(x) {
+    if (x > 12) {
+      return x = x - 12;
+    } else if (x == 0) {
+      return x = 12;
+    } else {
+      return x;
+    }
+  }
+
+  var h = addZero(twelveHour(date.getHours()));
+  var m = addZero(date.getMinutes());
+  var s = addZero(date.getSeconds());
+
+  $('.digital-clock').text(h + ':' + m + ':' + s)
+}
+</script>

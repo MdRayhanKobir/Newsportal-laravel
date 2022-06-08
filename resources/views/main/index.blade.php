@@ -951,8 +951,8 @@
                         @endif
                     </div>
                     <table class="table table-hover table-bordered">
-                        <tr>
-                            <th>
+                        <tr style="background-color: #81ecec">
+                            <th >
                                 @if (session()->get('lang') == 'bangla')
                                     Fajr
                                 @else
@@ -972,7 +972,7 @@
                             </th>
                             <th>{{ $prayers->jahor }}</th>
                         </tr>
-                        <tr>
+                        <tr style="background-color: #81ecec">
                             <th>
                                 @if (session()->get('lang') == 'bangla')
                                     Asor
@@ -992,7 +992,7 @@
                             </th>
                             <th>{{ $prayers->magrib }}</th>
                         </tr>
-                        <tr>
+                        <tr style="background-color: #81ecec">
                             <th>
                                 @if (session()->get('lang') == 'bangla')
                                     Isha
@@ -1038,7 +1038,7 @@
                     </div>
                     <div class="">
                         @foreach ($website as $website)
-                            <div class=" table table-bordered">
+                            <div class=" table table-bordered" style="background-color: #79aacf">
                                 <div class="news-title-02">
                                     <h4 class="heading-03"><a href="{{ $website->website_link }}"
                                             target="_blank"><i class="fa fa-check"

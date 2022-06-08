@@ -7,7 +7,7 @@
          url('assets/fonts/solaiman-lipi.woff') format('woff'),
          url('assets/fonts/solaiman-lipi.ttf') format('truetype'),
          url('assets/fonts/solaiman-lipi.svg#SolaimanLipiNormal') format('svg');
-    
+
     font-weight:normal;font-style:normal;
 }
 
@@ -39,10 +39,10 @@ h6 {
 }
 html,
 body { height: 100% }
-body { 
+body {
     font-family: SolaimanLipiNormal;
     font-size:16px;
-    line-height:23px;   
+    line-height:23px;
 }
 a:hover { text-decoration: none }
 
@@ -79,7 +79,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
  /**==================================
    Logo, Menu & Search Section start
- ==================================**/ 
+ ==================================**/
 .header-icon ul{
 	margin:22px -35px;
 	padding:0 0 0 10px;
@@ -134,9 +134,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropbtn-02 {
-  background-color: #fff;
+
   font-size: 16px;
   border: none;
+  background: none;
 }
 .dropbtn-02 i{
 	background-color: #0084FF;
@@ -164,12 +165,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 /** =========search-Css==========**/
 
 .search-icon-holder {
-   
+
 }
 .search-icon i {
-   background-color: #fff;
+   /* background-color: #fff; */
     display:inline-block;
-	color:#000;
+	color:white !important;
 	width:25px;
 	height:25px;
 	line-height:25px;
@@ -178,7 +179,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	font-size:17px;
 }
 .search-icon i:hover {
-    background: #F0F0F0;
+    /* background: #F0F0F0; */
 }
 
 .search-icon-holder .close i {
@@ -220,9 +221,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     display: none
 }
 
- 
-/** =========Menu-Css==========**/ 
-.menu_bottom { 
+
+/** =========Menu-Css==========**/
+.menu_bottom {
     background: #3f51b5;
     float: right;
     margin-top: 11px;
@@ -233,7 +234,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     text-transform: capitalize;
     padding:10px;
 }
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: orange !important;
     margin: 0px;
@@ -241,7 +242,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	background:transparent;
 }
 
-.mainmenu .collapse ul ul, 
+.mainmenu .collapse ul ul,
 .mainmenu .collapse ul ul
 .dropdown-menu{
     background: #000000;
@@ -263,7 +264,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 /**==================================
    Date Section start
- ==================================**/ 
+ ==================================**/
  .date{
 	 margin:0 0 10px 0;
  }
@@ -276,7 +277,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	 display:inline-block;
 	 padding-right:15px;
  }
- 
+
  /**==================================
    Notice Section start
  ==================================**/
@@ -312,7 +313,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     position: relative;
 	margin:5px 0;
 }
-.lead-news img {	
+.lead-news img {
 	width:100%;
 	height:auto;
 }
@@ -412,7 +413,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	padding:20px 30px;
 	overflow:hidden;
 	margin:10px 0 10px 0;
-	
+
 }
 .bg-three{
 	background:#F0F3FC;
@@ -561,7 +562,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	font-size: 22px;
     line-height: 27px;
     font-weight: 400;
-	padding:5px 10px;	
+	padding:5px 10px;
 }
 .lead-heading-01 a{
     color: #fff;
@@ -575,7 +576,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	font-size: 20px;
     line-height: 25px;
     font-weight: 400;
-	margin:0; 
+	margin:0;
 	padding-top:5px;
 }
 .heading-01 a{
@@ -627,7 +628,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	transition:.7s;
 }
 /**=================================
-           owl-carousel  start   
+           owl-carousel  start
 ==================================**/
 .news_sec .owl-nav{
     position: absolute;
@@ -635,7 +636,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     top: -35px;
 		margin-left:5px
 }
-.news_sec .owl-nav button.owl-next, .news_sec .owl-nav button.owl-prev, 
+.news_sec .owl-nav button.owl-next, .news_sec .owl-nav button.owl-prev,
 .news_sec button.owl-dot {
 	border: none;
 	margin-right: 5px;
@@ -687,7 +688,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 /**=================================
-           tab  start   
+           tab  start
 ==================================**/
 .tab-header{
     background:#fff;
@@ -717,10 +718,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     text-decoration: none;
     margin-bottom: 0;
     background: #3f51b5;
-	
+
 }
 
-.tab-header .nav-tabs > li.active > a, .tab-header 
+.tab-header .nav-tabs > li.active > a, .tab-header
 .nav-tabs > li.active > a:focus, .tab-header
 .nav-tabs > li.active > a:hover {
     border: none;
@@ -764,7 +765,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     color:#000;
 	padding:5px !important
 }
-.tab-header-02 .nav-tabs > li.active > a, .tab-header-02 
+.tab-header-02 .nav-tabs > li.active > a, .tab-header-02
 .nav-tabs > li.active > a:focus, .tab-header-02
 .nav-tabs > li.active > a:hover {
     border: none;
@@ -772,7 +773,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
     color: #E14145;
 }
 /**=================================
-          old news search css  
+          old news search css
 ==================================**/
 .old-news-date {
 	margin-left: -6px;
@@ -806,7 +807,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	overflow:hidden;
 }
 /**=================================
-    Top Footer css  
+    Top Footer css
 ==================================**/
 .top-footer{
 	border-top:2px solid#F4AE7E;
@@ -837,7 +838,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .facebook:hover{
     color: #fff;
-    background: #023369; 
+    background: #023369;
 }
 
 .twitter{
@@ -853,7 +854,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .twitter:hover{
     color: #fff;
-    background: #018cc1; 
+    background: #018cc1;
 }
 
 .instagram{
@@ -869,7 +870,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .instagram:hover{
     color: #fff;
-    background: #e22b4e; 
+    background: #e22b4e;
 }
 
 .android{
@@ -885,7 +886,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .android:hover{
     color: #fff;
-    background: #627c07; 
+    background: #627c07;
 }
 
 .linkedin{
@@ -901,7 +902,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .linkedin:hover{
     color: #fff;
-    background: #e03421; 
+    background: #e03421;
 }
 .youtube{
     background-color: #d80202;
@@ -916,7 +917,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 .youtube:hover{
     color: #fff;
-    background: #FF0000; 
+    background: #FF0000;
 }
 .apps-img ul{
     list-style: none;
@@ -955,7 +956,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 /**=================================
-   Single Page css  
+   Single Page css
 ==================================**/
 .single-page{
 	margin:20px 0;
@@ -1082,11 +1083,11 @@ header.headline-header h1 {
     margin-bottom: 10px;
 }
 .archive_img img:hover{
-    background:#F09642;  
+    background:#F09642;
     opacity: 0.9;
 }
 .archive_img_again img:hover{
-    background:#F09642; 
+    background:#F09642;
     opacity: 0.9;
 }
 .archive_dtails{

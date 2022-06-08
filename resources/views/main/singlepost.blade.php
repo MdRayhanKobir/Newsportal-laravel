@@ -1,6 +1,11 @@
 @extends('main.home_master');
 @section('title')
-    {{ $post->title_eng }}
+@if (session()->get('lang') == 'bangla')
+{{ $post->title_eng }}
+@else
+{{ $post->title_bang }}
+@endif
+
 @endsection
 @section('content')
     <!-- single-page-start -->
@@ -78,9 +83,9 @@
                         <img src="{{ asset($post->image) }}" alt="" />
                         <h4 class="caption">
                             @if (session()->get('lang') == 'bangla')
-                                {{ $post->title_eng }}
+                                <h3 class="text-danger">{{ $post->title_eng }} <span style="font-size: 30px">|| </span> {{ $post->tags_eng }}</h3>
                             @else
-                                {{ $post->title_bang }}
+                                <h3 class="text-danger">{{ $post->title_bang }} <span style="font-size: 30px">|| </span> {{ $post->tags_bang }}</h3>
                             @endif
                             <br><br>
                             <div class="sharethis-inline-share-buttons"></div>
@@ -95,6 +100,7 @@
                         </p>
                     </div><br><br>
                     <div class="sharethis-inline-share-buttons"></div><br>
+                    {{-- fb commnet boxt --}}
                     <div id="fb-root"></div>
                     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0"
                                         nonce="ClFC86MV"></script>
