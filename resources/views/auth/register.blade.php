@@ -27,6 +27,7 @@
                 <div class="content-wrapper full-page-wrapper d-flex align-items-center auth login-bg">
                     <div class="card col-lg-4 mx-auto">
                         <div class="card-body px-5 py-5">
+                            <img src="{{ asset('image/jonota.png') }}" alt="" style="margin-bottom:10px">
                             <h3 class="card-title text-left mb-3">Register</h3>
                             <form method="POST" action="{{ route('register') }}">
                                 @csrf
@@ -57,12 +58,12 @@
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-block enter-btn">Register</button>
                                 </div>
-                                <div class="d-flex">
+                                {{-- <div class="d-flex">
                                     <button class="btn btn-facebook col mr-2">
                                         <i class="mdi mdi-facebook"></i> Facebook </button>
                                     <button class="btn btn-google col">
                                         <i class="mdi mdi-google-plus"></i> Google plus </button>
-                                </div>
+                                </div> --}}
                                 <p class="sign-up text-center">Already have an Account?<a href="{{ route('login') }}">
                                         Sign Up</a></p>
                                 <p class="terms">By creating an account you are accepting our<a href="#"> Terms

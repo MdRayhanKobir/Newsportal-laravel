@@ -25,7 +25,7 @@
                  <h5 class="card-title" style="font-size:20px">{{ $post->title_bang }}</h5>
                   @endif
 
-              <a  href="{{ route('search.singlepost',['id' => $post->id]) }}" class="btn btn-primary">View Post</a>
+              <a  href="{{ route('search.singlepost',['id' => $post->id]) }}" class="btn btn-primary" style="margin-top:10px ">View Post</a>
             </div>
           </div>
        </div>

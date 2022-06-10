@@ -3,7 +3,7 @@
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
         {{-- <a class="sidebar-brand brand-logo" href="index.html"><img src="{{ asset('backend/assets/images/logo.svg') }}" --}}
                 {{-- alt="logo" /></a> --}}
-                <p  class="sidebar-brand brand-logo">NEWSPORTAL</p>
+                <img src="{{ asset('image/jonota.png') }}" alt="" style="margin-bottom:10px;width:200px;height:50px;">
         <a class="sidebar-brand brand-logo-mini" href="index.html"><img
                 src="{{ asset('backend/assets/images/logo-mini.svg') }}" alt="logo" /></a>
     </div>
@@ -56,9 +56,9 @@
                 </div>
             </div>
         </li>
-        <li class="nav-item nav-category">
+        {{-- <li class="nav-item nav-category">
             <span class="nav-link">Navigation</span>
-        </li>
+        </li> --}}
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('dashboard') }}">
                 <span class="menu-icon">
