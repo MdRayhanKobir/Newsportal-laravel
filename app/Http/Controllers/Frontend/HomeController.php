@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
+use App\Notifications\NewsCollect;
 use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\Controller;
 use BaconQrCode\Renderer\Color\Rgb;
+use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Notification;
 
 
 class HomeController extends Controller
@@ -105,6 +108,8 @@ class HomeController extends Controller
         $data['number']=$request->number;
         $data['details']=$request->details;
         DB::table('newsshare')->insert($data);
+        $news=User::get();
+        Notification::send($news, new NewsCollect($data));
         return redirect()->back();
 
 

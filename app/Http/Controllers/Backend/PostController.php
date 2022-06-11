@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\Backend;
 
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
+use App\Notifications\SubAdminPost;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 use Intervention\Image\Facades\Image;
 use Illuminate\Validation\Rules\Unique;
 
@@ -92,6 +95,9 @@ class PostController extends Controller
                 'message' => 'Successfully Post Insert',
                 'alert-type' => 'success'
             );
+
+            $user=User::where('type',1)->get();
+            Notification::send($user, new SubAdminPost($data));
 
             return redirect()->route('create.posts')->with($notification);
         } else {
