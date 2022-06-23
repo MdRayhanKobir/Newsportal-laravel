@@ -12,6 +12,7 @@
         ->limit(8)
         ->get();
     @endphp
+
    <div class="container-fluid ">
        <div class="row">
         @foreach ($post as $post )

@@ -39,18 +39,18 @@
                         </div>
 
                     </div>
-                    <div class="row">
+                    <div class="row ">
                         @foreach ($firstsection as $firstsection)
-                            <div class="col-md-3 col-sm-3  col-lg-3">
+                            <div class="col-md-3 col-sm-6  col-lg-3" style="height:22rem;">
                                 <div class="top-news">
                                     <a href="{{ route('singlepost', ['id' => $firstsection->id]) }}"><img
                                             src="{{ asset($firstsection->image) }}" alt="Notebook"></a>
                                     <h4 class="heading-02"><a
                                             href="{{ route('singlepost', ['id' => $firstsection->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
-                                                {{ Str::limit($firstsection->title_eng, 100) }}
+                                                {{ Str::limit($firstsection->title_eng, 60) }}
                                             @else
-                                                {{ Str::limit($firstsection->title_bang, 100) }}
+                                                {{ Str::limit($firstsection->title_bang, 60) }}
                                             @endif
                                         </a>
                                     </h4>
@@ -59,6 +59,8 @@
                         @endforeach
 
                     </div>
+
+
 
                     <!-- add-start -->
                     @php

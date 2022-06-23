@@ -133,9 +133,9 @@
                                     <h4 class="heading-02"><a
                                             href="{{ route('singlepost', ['id' => $relatednews->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
-                                                {{ $relatednews->title_eng }}
+                                                {{ Str::limit($relatednews->title_eng,60 )}}
                                             @else
-                                                {{ $relatednews->title_bang }}
+                                                {{ Str::limit($relatednews->title_bang,60 )}}
                                             @endif
                                         </a> </h4>
                                 </div>
