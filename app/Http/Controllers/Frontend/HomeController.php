@@ -62,6 +62,8 @@ class HomeController extends Controller
         $categoryallpost = DB::table('posts')->where('category_id', $id)->orderBy('id', 'desc')->paginate(5);
         return view('main.allpost', compact('categoryallpost'));
     }
+
+
     public function Suballpost($id, $subcategory_eng)
     {
         $subcategoryallpost = DB::table('posts')->where('subcategory_id', $id)->orderBy('id', 'desc')->paginate(5);
@@ -99,7 +101,7 @@ class HomeController extends Controller
         return view('main.contactus');
     }
 
-    // share news
+    // share news user
     public function StoreNews(Request $request){
         // dd($request);
         $data = array();

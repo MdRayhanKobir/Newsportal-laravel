@@ -489,7 +489,7 @@
                     </div>
                 </div>
             </div>
-            <!-- ******* -->
+            <!-- ******* five news section-->
             @php
                 $fivecategory = DB::table('categories')
                     ->skip(4)
@@ -1110,9 +1110,7 @@
                         </div>
                     </div>
 
-                    <!--=======================================
-                                                    Video Gallery clickable jquary  start
-                                                ========================================-->
+                    <!--=====================  Video Gallery clickable jquary  start==================-->
 
                     <script>
                         var slideIndex = 1;
@@ -1147,9 +1145,7 @@
                         }
                     </script>
 
-                    <!--=======================================
-                                                    Video Gallery clickable  jquary  close
-                                                =========================================-->
+                    <!--==================== Video Gallery clickable  jquary  close=====================-->
                     @php
                         $videogallery = DB::table('videos')
                             ->where('videos.type', 1)
@@ -1192,7 +1188,7 @@
                                 @foreach ($smallvideogallery as $smallvideogallery)
                                     <div class="embed-responsive embed-responsive-16by9 embed-responsive-item">
                                         <iframe width="853" height="480"
-                                            src="https://www.youtube.com/embed/{{ $smallvideogallery->embed_code }}"
+                                        {!! $smallvideogallery->embed_code !!}
                                             frameborder="0"
                                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                             allowfullscreen></iframe>

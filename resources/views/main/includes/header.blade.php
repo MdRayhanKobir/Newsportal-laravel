@@ -6,7 +6,7 @@ $category = DB::table('categories')
 $social = DB::table('socials')->first();
 $allwebsitesetting=DB::table('websitesettings')->first();
 @endphp
-<section class="hdr_section"style="margin-top: -23px;">
+<section class="hdr_section"style="margin-top: -23px; ">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-6 col-md-2 col-sm-4">
@@ -76,7 +76,7 @@ $allwebsitesetting=DB::table('websitesettings')->first();
                 <div class="header-icon">
                     <ul>
 
-                        <!-- version-start -->
+                        <!-- multi language -->
                         @if (session()->get('lang') == 'bangla')
                             <li class="version"><a style="color: white !important;" href="{{ route('lang.english') }}"><B>বাংলা</B></a>
                             </li>&nbsp;&nbsp;&nbsp;
@@ -145,7 +145,27 @@ $allwebsitesetting=DB::table('websitesettings')->first();
                                 </div>
                             </div>
                         </li>
-                        <li><div class="digital-clock" style="font-size: 20px">00:00:00</div></li>
+                        @php
+                    $data=array();
+        if(Session::has('loginId')){
+            $data=DB::table('user_auths')->where('id','=',Session::get('loginId'))->first();
+        }
+                        @endphp
+                        {{-- <li><div class="digital-clock" style="font-size: 20px">00:00:00</div></li> --}}
+                        @if ($data)
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn-02  " style="color:white; background-color:black;padding:8px;border-radius: 25px;">{{ $data->user_name }}</button>
+                                <div class="dropdown-content">
+                                    <a href="{{route('user.logout') }}"> Logout</a>
+
+                                </div>
+                            </div>
+                        </li>
+                        @else
+                        <li><div><a href="{{ route('user.log') }}" class="btn  btn-danger" style="color:white;">Login</a></div></li>
+                        @endif
+
                     </ul>
                 </div>
             </div>
@@ -153,7 +173,7 @@ $allwebsitesetting=DB::table('websitesettings')->first();
     </div>
 </section>
 
-<script>
+{{-- <script>
     $(document).ready(function() {
   clockUpdate();
   setInterval(clockUpdate, 1000);
@@ -186,4 +206,4 @@ function clockUpdate() {
 
   $('.digital-clock').text(h + ':' + m + ':' + s)
 }
-</script>
+</script> --}}

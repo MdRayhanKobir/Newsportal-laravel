@@ -14,7 +14,7 @@ class LiveSearchController extends Controller
         // Search in the title and body columns from the posts table
         $post = DB::table('posts')
             ->where('title_eng', 'LIKE', "%{$search}%")
-            ->orWhere('title_bang', 'LIKE', "%{$search}%")
+            ->orWhere('post_date', 'LIKE', "%{$search}%")
             ->get();
 
             return view('main.search', compact('post'));

@@ -13,50 +13,53 @@
             </div>
         </div>
         <div class="col-md-9 col-sm-8">
-@foreach ($categoryallpost as $categoryallpost )
+@foreach ($categoryallpost as $categoryallposts )
 <div class="archive_post_sec_again">
     <div class="row">
         <div class="col-md-4 col-sm-5">
             <div class="archive_img_again">
-                <a href="{{ route('singlepost',['id'=>$categoryallpost->id]) }}"><img src="{{ asset($categoryallpost->image) }}"></a>
+                <a href="{{ route('singlepost',['id'=>$categoryallposts->id]) }}"><img src="{{ asset($categoryallposts->image) }}"></a>
             </div>
         </div>
         <div class="col-md-8 col-sm-7">
             <div class="archive_padding_again">
                 <div class="archive_heading_01">
-                    <a href="{{ route('singlepost',['id'=>$categoryallpost->id]) }}">
+                    <a href="{{ route('singlepost',['id'=>$categoryallposts->id]) }}">
                     @if (session()->get('lang') == 'bangla')
-                        {{ $categoryallpost->title_eng }}
+                        {{ $categoryallposts->title_eng }}
                     @else
-                        {{ $categoryallpost->title_bang }}
+                        {{ $categoryallposts->title_bang }}
                     @endif</a>
                 </div>
                 <div class="archive_dtails">
                     @if (session()->get('lang') == 'bangla')
-                        {!!Str::limit( $categoryallpost->details_eng,100) !!}
+                        {!!Str::limit( $categoryallposts->details_eng,100) !!}
                     @else
-                    {!!Str::limit( $categoryallpost->details_bang,100) !!}
+                    {!!Str::limit( $categoryallposts->details_bang,100) !!}
                     @endif
                 </div>
-                <div class="dtails_btn"><a href="{{ route('singlepost',['id'=>$categoryallpost->id]) }}">Read More...</a>
+                <div class="dtails_btn"><a href="{{ route('singlepost',['id'=>$categoryallposts->id]) }}">
+                    @if (session()->get('lang') == 'bangla')
+                    Read More...
+                    @else
+                    বিস্তারিত পড়ুন...
+                    @endif
+                </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 @endforeach
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="post-nav">
                         <ul class="pager">
-                            <li class="active"><span class="active">01</span></li>
-                            <li><a href="#">02</a></li><li><a href="#" title="next"><i class="fa fa-forward" aria-hidden="true"></i>
-                            </a></li>
-                            <li class="next"><a href="#"><i class="fa fa-fast-forward" aria-hidden="true"></i></a></li>
+                            {{ $categoryallpost->links('vendor.pagination.custom') }}
                         </ul>
+
                     </div>
+
                 </div>
             </div>
         </div>
@@ -190,9 +193,10 @@
                     </div>
                 </div><!-- /.add-close -->
         </div>
+
     </div>
+
 </div>
 </section>
-
 @endsection
 

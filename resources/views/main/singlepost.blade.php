@@ -60,7 +60,7 @@
                                             তাকানো
                                         @endif
                                     </li>
-                                    <li><i class="fa fa-clock-o"></i> 09 My 2022 </li>
+                                    {{-- <li><i class="fa fa-clock-o"></i> 09 My 2022 </li> --}}
                                 </ul>
 
                             </div>
@@ -133,9 +133,9 @@
                                     <h4 class="heading-02"><a
                                             href="{{ route('singlepost', ['id' => $relatednews->id]) }}">
                                             @if (session()->get('lang') == 'bangla')
-                                                {{ Str::limit($relatednews->title_eng,60 )}}
+                                                {{ Str::limit($relatednews->title_eng,30 )}}
                                             @else
-                                                {{ Str::limit($relatednews->title_bang,60 )}}
+                                                {{ Str::limit($relatednews->title_bang,50 )}}
                                             @endif
                                         </a> </h4>
                                 </div>

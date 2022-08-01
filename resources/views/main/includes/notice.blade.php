@@ -21,9 +21,9 @@ $notice = DB::table('notices')->first();
                 <marquee>
                     @foreach ($headline as $headline)
                         @if (session()->get('lang') == 'bangla')
-                            {{ $headline->title_eng }}
+                            {{ $headline->title_eng }} ||
                         @else
-                            {{ $headline->title_bang }}
+                            {{ $headline->title_bang }} ||
                         @endif
                     @endforeach
                 </marquee>

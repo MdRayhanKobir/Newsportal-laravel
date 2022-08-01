@@ -17,6 +17,7 @@ use App\Http\Controllers\Backend\VideosController;
 use App\Http\Controllers\Backend\WebsiteSettingController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\LiveSearchController;
+use App\Http\Controllers\UserAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -196,7 +197,7 @@ Route::post('/store.writter',[RollController::class,'StoretUserRoll'])->name('st
 Route::get('/all.writter',[RollController::class,'AllUserRoll'])->name('all.writter');
 Route::get('/edit.writter/{id}',[RollController::class,'EditUserRoll'])->name('edit.writter');
 Route::post('/update.writter/{id}',[RollController::class,'UpdateUserRoll'])->name('update.writter');
-Route::post('/delete.writter/{id}',[RollController::class,'DeleteUserRoll'])->name('delete.writter');
+Route::get('/delete.writter/{id}',[RollController::class,'DeleteUserRoll'])->name('delete.writter');
 
 // Admin all WebsiteSetting Route
 Route::get('/allwebsite/setting',[WebsiteSettingController::class,'AllWebsiteSetting'])->name('allwebsite.setting');
@@ -211,4 +212,14 @@ Route::post('/strore/profile/{id}',[AdminController::class,'StoreProfile'])->nam
 // Admin Password Change Route
 Route::get('/show/password',[AdminController::class,'ShowPass'])->name('show.password');
 Route::post('/change/password',[AdminController::class,'ChangePass'])->name('change.password');
+
+
+
+// user login registration all route
+Route::get('/user-login',[UserAuthController::class,'UserLog'])->name('user.log');
+Route::post('/user-registration',[UserAuthController::class,'UserRegistration'])->name('user.registration');
+Route::post('/user/login',[UserAuthController::class,'UserRegLog'])->name('user.reg.login');
+// Route::post('/user-dashbboard',[UserAuthController::class,'UserDashboard']);
+Route::get('/user/logout',[UserAuthController::class,'UserLogout'])->name('user.logout');
+
 

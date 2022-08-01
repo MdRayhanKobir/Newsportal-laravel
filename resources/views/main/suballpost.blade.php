@@ -13,54 +13,53 @@
                     </div>
                 </div>
                 <div class="col-md-9 col-sm-8">
-                    @foreach ($subcategoryallpost as $subcategoryallpost)
+                    @foreach ($subcategoryallpost as $subcategoryallposts)
                         <div class="archive_post_sec_again">
                             <div class="row">
                                 <div class="col-md-4 col-sm-5">
                                     <div class="archive_img_again">
-                                        <a href="{{ route('singlepost', ['id' => $subcategoryallpost->id]) }}"><img
-                                                src="{{ asset($subcategoryallpost->image) }}"></a>
+                                        <a href="{{ route('singlepost', ['id' => $subcategoryallposts->id]) }}"><img
+                                                src="{{ asset($subcategoryallposts->image) }}"></a>
                                     </div>
                                 </div>
                                 <div class="col-md-8 col-sm-7">
                                     <div class="archive_padding_again">
                                         <div class="archive_heading_01">
-                                            <a href="{{ route('singlepost', ['id' => $subcategoryallpost->id]) }}">
+                                            <a href="{{ route('singlepost', ['id' => $subcategoryallposts->id]) }}">
                                                 @if (session()->get('lang') == 'bangla')
-                                                    {{ $subcategoryallpost->title_eng }}
+                                                    {{ $subcategoryallposts->title_eng }}
                                                 @else
-                                                    {{ $subcategoryallpost->title_bang }}
+                                                    {{ $subcategoryallposts->title_bang }}
                                                 @endif
                                             </a>
                                         </div>
                                         <div class="archive_dtails">
                                             @if (session()->get('lang') == 'bangla')
-                                                {!! Str::limit($subcategoryallpost->details_eng, 100) !!}
+                                                {!! Str::limit($subcategoryallposts->details_eng, 100) !!}
                                             @else
-                                                {!! Str::limit($subcategoryallpost->details_bang, 100) !!}
+                                                {!! Str::limit($subcategoryallposts->details_bang, 100) !!}
                                             @endif
                                         </div>
                                         <div class="dtails_btn"><a
-                                                href="{{ route('singlepost', ['id' => $subcategoryallpost->id]) }}">Read
-                                                More...</a>
+                                                href="{{ route('singlepost', ['id' => $subcategoryallposts->id]) }}">
+                                                @if (session()->get('lang') == 'bangla')
+                                                Read More...
+                                                @else
+                                                বিস্তারিত পড়ুন...
+                                                @endif</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-                    {{-- {{ $subcategoryallpost->links() }} --}}
+
 
                     <div class="row">
                         <div class="col-md-12">
                             <div class="post-nav">
                                 <ul class="pager">
-                                    <li class="active"><span class="active">01</span></li>
-                                    <li><a href="#">02</a></li>
-                                    <li><a href="#" title="next"><i class="fa fa-forward" aria-hidden="true"></i>
-                                        </a></li>
-                                    <li class="next"><a href="#"><i class="fa fa-fast-forward"
-                                                aria-hidden="true"></i></a></li>
+                                    {{ $subcategoryallpost->links('vendor.pagination.custom') }}
                                 </ul>
                             </div>
                         </div>
